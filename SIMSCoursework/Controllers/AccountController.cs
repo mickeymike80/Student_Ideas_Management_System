@@ -42,6 +42,8 @@ namespace SIMSCoursework.Controllers
             }
         }
 
+        public int MyProperty { get; set; }
+
         //
         // GET: /Account/Login
         [AllowAnonymous]
