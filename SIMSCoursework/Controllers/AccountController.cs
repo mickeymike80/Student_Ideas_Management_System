@@ -24,13 +24,26 @@ namespace SIMSCoursework.Controllers
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
-            UserManager = userManager;
+            
+
+        UserManager = userManager;
             SignInManager = signInManager;
         }
 
-        public ApplicationSignInManager SignInManager { get => _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>(); set => _signInManager = value; }
+        
+            public ApplicationSignInManager SignInManager
+             {
+            get
+            {
+                return _signInManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationSignInManager>();
+            }
+            private set
+            {
+                _signInManager = value;
+            }
+        }
 
-        public ApplicationUserManager UserManager
+public ApplicationUserManager UserManager
         {
             get
             {
