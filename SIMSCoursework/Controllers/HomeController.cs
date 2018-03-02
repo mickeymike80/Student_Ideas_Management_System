@@ -15,7 +15,7 @@ namespace SIMSCoursework.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your application description pageeeee.";
 
             return View();
         }
@@ -26,5 +26,6 @@ namespace SIMSCoursework.Controllers
 
             return View();
         }
+          
     }
 }
