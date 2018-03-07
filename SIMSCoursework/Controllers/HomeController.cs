@@ -26,6 +26,10 @@ namespace SIMSCoursework.Controllers
 
             return View();
         }
-          
+        public ActionResult TC()
+        {
+            return View();
+        }
+
     }
 }
