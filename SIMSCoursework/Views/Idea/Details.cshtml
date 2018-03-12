@@ -1,0 +1,77 @@
+﻿@model SIMSCoursework.idea
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>idea</h4>
+    <hr />
+    <dl class="dl-horizontal">
+      
+
+       
+      
+       
+        
+
+        
+
+        <dt>
+           Posted by:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.submitted_By)
+        </dd>
+
+        <dt>
+          Title:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idea_Title)
+        </dd>
+
+        <dt>
+           Body:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idea_Body)
+        </dd>
+
+        <dt>
+           Views:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.view_Count)
+        </dd>
+
+        
+
+        <dt>
+          Status:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+      
+        <dt>
+          Time of post:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.timestamp)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "View")
+</p>

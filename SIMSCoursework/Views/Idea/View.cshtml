@@ -1,0 +1,75 @@
+﻿@model IEnumerable<SIMSCoursework.idea>
+
+@{
+    ViewBag.Title = "View";
+
+
+}
+
+<h2>View</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        
+        
+        <th>
+            @Html.DisplayNameFor(model => model.submitted_By)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idea_Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idea_Body)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.view_Count)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.timestamp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.submitted_By)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idea_Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idea_Body)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.view_Count)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.timestamp)
+        </td>
+        <td>
+        
+            @Html.ActionLink("Details", "Details", new { id=item.idea_Id }) 
+           
+        </td>
+    </tr>
+}
+
+</table>

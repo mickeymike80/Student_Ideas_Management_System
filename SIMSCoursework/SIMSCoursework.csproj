@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -284,6 +285,8 @@
     <Content Include="Views\Authentication\Index.cshtml" />
     <Content Include="Views\Idea\Create.cshtml" />
     <Content Include="Views\Home\TC.cshtml" />
+    <Content Include="Views\Idea\View.cshtml" />
+    <Content Include="Views\Idea\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -313,7 +316,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1627</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
